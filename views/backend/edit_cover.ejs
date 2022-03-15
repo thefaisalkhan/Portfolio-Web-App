@@ -1,0 +1,42 @@
+<%- include('./partials/header')%>
+      
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Menu Area</h1>
+
+                    <div class="card shadow mb-4">
+                      
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Change the Cover Image</h6>
+                        </div>
+              
+                        <div class="card-body">
+                            <div class="table-responsive">
+                               <form action="/admin/portfolio/<%=work._id%>/edit_cover" method="post" enctype="multipart/form-data">
+                                   <div class="form-group">
+                                    <label for="exampleFormControlFile1">Cover</label>   
+                                    <input type="file" name="cover" class="form-control-file" id="exampleFormControlFile1">
+                                   </div>
+                                   <div class="form-group">
+                                    <label for="exampleFormControlFile2">Images of the Work</label>
+                                    <input type="file" class="form-control-file" name="images" id="exampleFormControlFile2" multiple>
+                                  </div>
+                                
+                                   <div class="form-group">
+                                       <button type="submit" class="btn btn-success">Update</button>
+
+                                   </div>
+
+                               </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+<%- include('./partials/footer')%>

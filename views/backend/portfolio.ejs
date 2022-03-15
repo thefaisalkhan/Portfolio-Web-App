@@ -1,0 +1,67 @@
+<%- include('./partials/header')%>
+      
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Portfolio Area</h1>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header">
+                        <form action="/admin/portfolio/create" method="get">
+                            <button type="submit" class="btn btn-success">Add</button>
+                        </form>
+                        </div>
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Portfolio</h6>
+                        </div>
+              
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                       
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Title</th>
+                                            <th>Date</th>
+                                            <th>Client</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <%works.forEach(function(work){%>
+
+                                            <tr>
+                                                <td>
+                                                    <% work.category.forEach(function(cat) {%>
+                                                        <%=cat.name%>
+                                                        <% }) %>
+                                                </td>
+                                                <td><%=work.title%></td>
+                                                <td><%=work.updated_at%></td>
+                                                <td></td>
+                                                <td>
+                                                    <a href="/admin/portfolio/<%=work._id%>/edit_cover" class="btn btn-warning">Cover</a>
+                                                    <a href="/admin/portfolio/<%=work._id%>/edit" class="btn btn-success">Edit</a>
+                                                    <a href="/admin/portfolio/<%=work._id%>/delete" class="btn btn-danger">Delete</a>
+
+                                                </td>
+                                            </tr>
+                                            <%})%>
+                                        
+                                     
+
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+<%- include('./partials/footer')%>

@@ -1,0 +1,51 @@
+<%- include('./partials/header')%>
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Settings Area</h1>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Settings</h6>
+                        </div>
+<div class="card-body">
+    <div class="table-responsive">
+        <form action ="/admin/settings" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="imagelogo">Logo image : </label>
+                <img src="/<% if(settings.logo.filename == null){%>assets/images/h-logo.svg<%}else{%>/<%=settings.logo.filename%><%}%>" id="imagelogo" class="rounded-circle" width="80" height="80" alt="logo">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput0">Logo : </label>
+                <input type="file" class="form-control-file" id="exampleFormControlInput0" name="logo">
+            </div>
+   
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Facebook : </label>
+                <input type="text" name="facebook" class="form-control" id="exampleFormControlInput1" value="<%settings.facebook%>">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Instagram : </label>
+                <input type="text" name="instagram" class="form-control" id="exampleFormControlInput1" value="<%settings.instagram%>">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">dribble : </label>
+                <input type="text" name="dribble" class="form-control" id="exampleFormControlInput1" value="<%settings.dribble%>">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Footer : </label>
+                <input type="text" name="footer" class="form-control" id="exampleFormControlInput2" value="<%=settings.footer%>">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Update Settings</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+</div>
+</div>
+

@@ -1,0 +1,47 @@
+<%- include('./partials/header')%>
+      
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Update Service</h1>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Update Service</h6>
+                        </div>
+              
+                        <div class="card-body">
+                            <div class="table-responsive">
+                              <form action="/admin/service/<%=service._id%>/edit" method="post" >
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Categories</label>
+                                    <input type="text" name="category" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=service.category%>">
+
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="exampleInputEmail2">Name : </label>
+                                    <input type="text" name="title" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" value="<%=service.name%>">
+                                </div>
+
+                              
+                                 
+
+                                 
+                                <div class="form-group" >
+                                    <button type="submit" class="btn btn-success">Update new Work</button>
+                                </div>
+                               
+                              </form>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+<%- include('./partials/footer')%>

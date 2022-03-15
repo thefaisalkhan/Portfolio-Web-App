@@ -1,0 +1,49 @@
+<%- include('./partials/header')%>
+      
+
+                <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="card text-white bg-primary mb-3 col-4" style="max-width: 18rem;">
+                       
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Count</h5>
+                            <p class="card-text"><%=works.length%></p>
+                        </div>
+ 
+                     </div>
+                     <div class="card text-white bg-danger mb-3 col-4" style="max-width: 18rem;">
+                        
+                         <div class="card-body">
+                             <h5 class="card-title">Blog Count</h5>
+                             <p class="card-text"><%=posts.length%></p>
+                         </div>
+  
+                      </div>
+                      <div class="card text-white bg-success mb-3 col-4" style="max-width: 18rem;">
+                        
+                         <div class="card-body">
+                             <h5 class="card-title">Categories Count</h5>
+                             <p class="card-text"><%=categories.length%></p>
+                         </div>
+  
+                      </div>
+                      <div class="card text-white bg-primary mb-3 col-4" style="max-width: 18rem;">
+                        
+                         <div class="card-body">
+                             <h5 class="card-title">Services Count</h5>
+                             <p class="card-text"><%=services.length%></p>
+                         </div>
+  
+                      </div>
+                      
+ 
+                 </div>
+                 <!-- /.container-fluid -->
+                </div>
+                   
+
+            </div>
+            <!-- End of Main Content -->
+<%- include('./partials/footer')%>

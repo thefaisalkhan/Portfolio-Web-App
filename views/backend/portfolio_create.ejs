@@ -1,0 +1,63 @@
+<%- include('./partials/header')%>
+      
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Add New Work</h1>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Add New Work</h6>
+                        </div>
+              
+                        <div class="card-body">
+                            <div class="table-responsive">
+                              <form action="/admin/portfolio/create" method="post" enctype="multipart/form-data">
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Categories</label>
+                                    <select class="form-control" id="exampleFormControlSelect1" name="category_id">
+                                        <% categories.forEach(function(category){%>
+                                            <option value="<%=category._id%>"><%=category.name%></option>
+                                        <%})%>
+                                    </select>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="exampleInputEmail2">Title : </label>
+                                    <input type="text" name="title" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="FUTURISTIC CONCEPT OF EXPLORATION">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Cover</label>
+                                    <input type="file" class="form-control-file" name="cover" id="exampleFormControlFile1">
+                                  </div>
+
+                                  <div class="form-group">
+                                      <textarea name="description" id="editor1" rows="10" cols="80">
+                                          This is my textarea to be replaced with CKEditor.
+                                      </textarea>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label for="exampleFormControlFile2">Images of the Work</label>
+                                    <input type="file" class="form-control-file" name="images" id="exampleFormControlFile2" multiple>
+                                  </div>
+                                
+                                
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success">Add new Work</button>
+                                </div>
+                               
+                              </form>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+<%- include('./partials/footer')%>
